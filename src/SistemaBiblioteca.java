@@ -1,0 +1,9 @@
+public class SistemaBiblioteca {
+    public static void main(String[] args) {
+        Material m1 = new Libro("L-100", "Pablito y el calvito", 1789, true, "pepe lepew", "yes");
+        Material m2 = new Revista("R-005", "La vida de los famosos", 2005, false, 01, "Farandula");
+
+        m1.mostrarInfo();
+        m2.mostrarInfo();
+    }
+}
