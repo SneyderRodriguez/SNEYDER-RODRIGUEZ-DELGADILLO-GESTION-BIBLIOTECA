@@ -26,4 +26,11 @@ public class SistemaBiblioteca {
     }
 
     Map<String, ArrayList<String>> listaEspera = new HashMap<>();
+    public void agregarAListaEspera(String codigo, String nombre){
+        ArrayList<String> lista = listaEspera.get(codigo);
+        if (lista == null){
+            lista = new ArrayList<>();
+            listaEspera.put(codigo, lista);
+        }
+    }
 }
