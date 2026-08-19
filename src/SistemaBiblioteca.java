@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class SistemaBiblioteca {
     public static void main(String[] args) {
         Material m1 = new Libro("L-100", "Pablito y el calvito", 1789, true, "pepe lepew", "yes");
@@ -5,5 +8,13 @@ public class SistemaBiblioteca {
 
         m1.mostrarInfo();
         m2.mostrarInfo();
+    }
+
+    Map <String, Material> catalogo = new HashMap<>();
+    public void registrarMaterial(Material m){
+        catalogo.put(m.getCodigo(), m);
+    }
+    public  Material buscarMaterial(String codigo){
+        return catalogo.get(codigo);
     }
 }
