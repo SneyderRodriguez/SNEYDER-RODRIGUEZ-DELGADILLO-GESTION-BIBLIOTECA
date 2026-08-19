@@ -4,6 +4,8 @@ public class Main {
 
         biblioteca.registrarMaterial(new Revista("R-050", "El papel dual de los insectos", 1999, true, 20, "Ciencia"));
         biblioteca.registrarMaterial(new Libro("L-028", "Los juegos del hambre", 2001,false, "Penelope Saw", "si"));
+        biblioteca.registrarMaterial(new Revista("R-005", "La vida de los famosos", 2005, false, 01, "Farandula"));
+        biblioteca.registrarMaterial(new Libro("L-100", "Pablito y el calvito", 1789, true, "pepe lepew", "no"));
 
         Material resultado = biblioteca.buscarMaterial("L-028");
         resultado.mostrarInfo();
