@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,4 +24,6 @@ public class SistemaBiblioteca {
             entrada.getValue().mostrarInfo();
         }
     }
+
+    Map<String, ArrayList<String>> listaEspera = new HashMap<>();
 }
