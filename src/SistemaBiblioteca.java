@@ -32,5 +32,24 @@ public class SistemaBiblioteca {
             lista = new ArrayList<>();
             listaEspera.put(codigo, lista);
         }
+        lista.add(nombre);
+    }
+
+    public ArrayList<String> consultarListaEspera(String codigo){
+        return listaEspera.get(codigo);
+    }
+    public void entregarMaterial(String codigo){
+        ArrayList<String> lista = consultarListaEspera(codigo);
+        if (lista == null || lista.isEmpty()){
+            System.out.println("No existe una lista o la lista está vacia");
+        }else {
+            String usuario = lista.remove(0);
+            Material material = buscarMaterial(codigo);
+            if (material != null){
+                material.setDisponible(false);
+            }
+            if (material.isDisponible()){}
+            System.out.println( usuario + " recibe el material " + codigo);
+        }
     }
 }

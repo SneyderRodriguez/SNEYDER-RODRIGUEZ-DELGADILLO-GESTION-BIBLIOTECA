@@ -26,6 +26,10 @@ public abstract class Material implements Catalogable {
         return disponible;
     }
 
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
     public abstract String getTipo();
 
     public void mostrarInfo() {

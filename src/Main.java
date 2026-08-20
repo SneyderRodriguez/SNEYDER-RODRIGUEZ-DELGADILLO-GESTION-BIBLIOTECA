@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         SistemaBiblioteca biblioteca = new SistemaBiblioteca();
@@ -6,6 +8,11 @@ public class Main {
         biblioteca.registrarMaterial(new Libro("L-028", "Los juegos del hambre", 2001,false, "Penelope Saw", "si"));
         biblioteca.registrarMaterial(new Revista("R-005", "La vida de los famosos", 2005, false, 01, "Farandula"));
         biblioteca.registrarMaterial(new Libro("L-100", "Pablito y el calvito", 1789, true, "pepe lepew", "no"));
+
+        biblioteca.agregarAListaEspera("R-050", "Ana");
+        biblioteca.agregarAListaEspera("R-050", "Jessica");
+        biblioteca.agregarAListaEspera("R-050", "Sergio");
+        biblioteca.agregarAListaEspera("L-028", "Natalia");
 
         Material resultado = biblioteca.buscarMaterial("L-028");
         resultado.mostrarInfo();
@@ -18,5 +25,10 @@ public class Main {
         }
 
         biblioteca.mostrarCatalogo();
+        biblioteca.entregarMaterial("R-050");
+        biblioteca.buscarMaterial("R-050").mostrarInfo();
+        ArrayList<String> lista = biblioteca.consultarListaEspera("R-050");
+        System.out.println(lista);
+
     }
 }
